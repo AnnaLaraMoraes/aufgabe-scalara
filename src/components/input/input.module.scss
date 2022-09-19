@@ -1,0 +1,16 @@
+@import '../../styles/variables.scss';
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+
+    > input {
+        padding: 6px;
+        font-weight: 700;
+        color: $blue;
+        border: 1px solid $light-gray;
+        border-radius: 8px;
+        text-align: center;
+    }
+}

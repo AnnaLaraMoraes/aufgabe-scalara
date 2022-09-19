@@ -1,0 +1,31 @@
+@import '../../styles/variables.scss';
+
+.container {
+    padding: 16px;
+    padding-top: 0px;
+    gap: 26px;
+    display: flex;
+    max-width: 80ch;
+ 
+    flex-direction: column;
+
+ h1 {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 36px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: $blue;
+        margin: 0;
+ }
+     a {
+        color: $gray;
+    }
+}
+
+@media screen and (max-width: $tablet) {
+    .container {
+        height: 76vh;
+        overflow: scroll;
+    }
+ }

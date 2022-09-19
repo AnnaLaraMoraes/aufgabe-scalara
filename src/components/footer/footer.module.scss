@@ -1,0 +1,12 @@
+@import '../../styles/variables.scss';
+
+.footer {
+     position: absolute;
+    width: 100%;
+    bottom: 0px;
+    z-index: -1;
+    height: 52px;
+    background-color: $white;
+    background-image: linear-gradient(to right, $light-red, $light-red 48px, $white 48px, $white );
+    background-size: 80px 100%;
+}
