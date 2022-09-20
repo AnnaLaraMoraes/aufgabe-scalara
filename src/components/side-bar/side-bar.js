@@ -1,6 +1,7 @@
 import styles from "./side-bar.module.scss";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { Button } from "./components/button/button";
 
 export const SideBar = () => {
   const [selectedMenu, setSelectedMenu] = useState(null);
@@ -19,32 +20,19 @@ export const SideBar = () => {
     <div className={styles.container}>
       <h2>Optionen</h2>
       <div className={styles.menuItens}>
-        <button
-          className={[
-            styles[
-              selectedMenu === "/historic"
-                ? "selectedButton"
-                : "notSelectedButton"
-            ],
-            styles.menuButton,
-          ].join(" ")}
-          onClick={() => handleMenu("/historic")}
-        >
-          Geschichte
-        </button>
-        <button
-          className={[
-            styles[
-              selectedMenu === "/explanation"
-                ? "selectedButton"
-                : "notSelectedButton"
-            ],
-            styles.menuButton,
-          ].join(" ")}
-          onClick={() => handleMenu("/explanation")}
-        >
-          Erklärungen
-        </button>
+        <Button
+          selectedMenu={selectedMenu}
+          handleMenu={handleMenu}
+          urlId="/historic"
+          name="Geschichte"
+        />
+
+        <Button
+          selectedMenu={selectedMenu}
+          handleMenu={handleMenu}
+          urlId="/explanation"
+          name="Erklärungen"
+        />
       </div>
     </div>
   );

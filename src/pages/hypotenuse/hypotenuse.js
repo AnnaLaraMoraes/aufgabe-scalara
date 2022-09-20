@@ -18,26 +18,30 @@ export const Hypotenuse = () => {
   };
 
   const calculate = () => {
-    setResultCalcule(
-      Math.sqrt(
-        inputA.current.value * inputA.current.value +
-          inputB.current.value * inputB.current.value
-      )
-    );
+    if (inputA.current.value && inputB.current.value) {
+      setResultCalcule(
+        Math.sqrt(
+          inputA.current.value * inputA.current.value +
+            inputB.current.value * inputB.current.value
+        )
+      );
 
-    const newCalc = {
-      inputA: inputA.current.value,
-      inputB: inputB.current.value,
-      result: Math.sqrt(
-        inputA.current.value * inputA.current.value +
-          inputB.current.value * inputB.current.value
-      ),
-    };
+      const newCalc = {
+        inputA: inputA.current.value,
+        inputB: inputB.current.value,
+        result: Math.sqrt(
+          inputA.current.value * inputA.current.value +
+            inputB.current.value * inputB.current.value
+        ),
+      };
 
-    handleStorage(newCalc);
+      handleStorage(newCalc);
 
-    inputA.current.value = null;
-    inputB.current.value = null;
+      inputA.current.value = null;
+      inputB.current.value = null;
+    } else {
+      alert("Sie müssen den Ankathete und Gegenkathete eingeben");
+    }
   };
 
   return (

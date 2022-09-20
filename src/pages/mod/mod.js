@@ -18,18 +18,22 @@ export const Mod = () => {
   };
 
   const calculate = () => {
-    setResultCalcule(inputA.current.value % inputB.current.value);
+    if (inputA.current.value && inputB.current.value) {
+      setResultCalcule(inputA.current.value % inputB.current.value);
 
-    const newCalc = {
-      inputA: inputA.current.value,
-      inputB: inputB.current.value,
-      result: inputA.current.value % inputB.current.value,
-    };
+      const newCalc = {
+        inputA: inputA.current.value,
+        inputB: inputB.current.value,
+        result: inputA.current.value % inputB.current.value,
+      };
 
-    handleStorage(newCalc);
+      handleStorage(newCalc);
 
-    inputA.current.value = null;
-    inputB.current.value = null;
+      inputA.current.value = null;
+      inputB.current.value = null;
+    } else {
+      alert("Sie müssen den Zahl und Divisor eingeben");
+    }
   };
 
   return (

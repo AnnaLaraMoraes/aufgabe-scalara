@@ -19,33 +19,6 @@
     }
 }
 
-.menuButton {
-    background-color: transparent;
-    cursor: pointer;
-    border: none;
-    outline: none;
-    padding: 12px 12px 12px 32px;
-    text-align: left;
-    margin-bottom: 12px;
-    font-style: normal;
-    font-size: 14px;
-    line-height: 20px;
-}
-
-.menuButton:hover {
-    font-weight: 700;
-    background-color: $hover-gray;
-}
-
-.selectedButton {
-    font-weight: 700;
-    background-color: $hover-gray;
-}
-
-.notSelectedButton {
-    font-weight: 400;
-}
-
 .menuItens {
     display: flex;
     flex-direction: column;

@@ -24,12 +24,12 @@
       }
       
       td, th {
-        border: 1px solid $light-gray;
+        border: none;
         text-align: left;
         padding: 8px;
       }
       
       tr:nth-child(even) {
-        background-color: $light-gray;
+        background-color: $hover-gray;
       }
 }

@@ -17,16 +17,20 @@ export const Circumference = () => {
   };
 
   const calculate = () => {
-    setResultCalcule(inputA.current.value * 3.1415);
+    if (inputA.current.value) {
+      setResultCalcule(inputA.current.value * 3.1415);
 
-    const newCalc = {
-      inputA: inputA.current.value,
-      result: inputA.current.value * 3.1415,
-    };
+      const newCalc = {
+        inputA: inputA.current.value,
+        result: inputA.current.value * 3.1415,
+      };
 
-    handleStorage(newCalc);
+      handleStorage(newCalc);
 
-    inputA.current.value = null;
+      inputA.current.value = null;
+    } else {
+      alert("Sie müssen den Durchmesser eingeben");
+    }
   };
 
   return (
